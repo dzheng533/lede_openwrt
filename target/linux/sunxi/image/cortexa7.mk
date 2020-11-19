@@ -201,7 +201,7 @@ TARGET_DEVICES += xunlong_orangepi-r1
 define Device/xunlong_orangepi-zero
   DEVICE_VENDOR := Xunlong
   DEVICE_MODEL := Orange Pi Zero
-  DEVICE_PACKAGES:=kmod-rtc-sunxi
+  DEVICE_PACKAGES:=kmod-rtc-sunxi kmod-xradio
   SOC := sun8i-h2-plus
 endef
 TARGET_DEVICES += xunlong_orangepi-zero
@@ -209,7 +209,11 @@ TARGET_DEVICES += xunlong_orangepi-zero
 define Device/xunlong_orangepi-2
   DEVICE_VENDOR := Xunlong
   DEVICE_MODEL := Orange Pi 2
-  DEVICE_PACKAGES:=kmod-rtc-sunxi
+  DEVICE_PACKAGES:=kmod-rtc-sunxi kmod-xradio \
+   kmod-sound-core \
+   kmod-sound-soc-sun4i-codec \
+   kmod-sound-soc-sun8i-codec \
+   kmod-sound-soc-sun8i-codec-analog
   SOC := sun8i-h3
 endef
 TARGET_DEVICES += xunlong_orangepi-2
